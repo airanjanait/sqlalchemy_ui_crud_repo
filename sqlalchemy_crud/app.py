@@ -32,27 +32,27 @@ session.commit()
 
 #______________get data from table_________________________
 
-# data=session.query(Empinfo)
-# for d in data:
-#     emp_name=d.emp_name
-#     DOJ=d.DOJ
-#     MOnumber=d.MOnumber
+data=session.query(Empinfo)
+for d in data:
+    emp_name=d.emp_name
+    DOJ=d.DOJ
+    MOnumber=d.MOnumber
     
-#     print(emp_name,DOJ,MOnumber)
+    print(emp_name,DOJ,MOnumber)
    
 #________________________update data ___________________________
 
-# update_data=session.query(Empinfo).filter(Empinfo.emp_name=='ranjana').first()
-# if update_data:
-#     update_data.emp_name="rohit"
-#     # session.commit()
-#     print("updated")
-# else :
-#     print("record not found")
+update_data=session.query(Empinfo).filter(Empinfo.emp_name=='ranjana').first()
+if update_data:
+    update_data.emp_name="rohit"
+    # session.commit()
+    print("updated")
+else :
+    print("record not found")
     
 #____________________delete data___________________________________
 
-# delete_data=session.query(Empinfo).filter(Empinfo.emp_name=="rohit").first()
-# session.delete(delete_data)
-# session.commit()
-# print("data deleted ")
+delete_data=session.query(Empinfo).filter(Empinfo.emp_name=="rohit").first()
+session.delete(delete_data)
+session.commit()
+print("data deleted ")
